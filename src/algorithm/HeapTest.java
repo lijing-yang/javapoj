@@ -10,5 +10,9 @@ public class HeapTest {
         heap.makeHeap();
         heap.sortHeap();
         heap.print();
+        heap.insertNumber(77);
+        heap.print();
+        heap.sortHeap();
+        heap.print();
     }
 }

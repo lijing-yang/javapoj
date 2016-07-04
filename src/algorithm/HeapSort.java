@@ -11,7 +11,7 @@ public class HeapSort {
 
     HeapSort(int n){
         num = n;
-        myList = new int[n];
+        myList = new int[100];
         Random random = new Random();
         for(int i=0;i<n;i++){
             myList[i] = random.nextInt(100);
@@ -19,8 +19,11 @@ public class HeapSort {
     }
 
     public void print(){
+        int count = 1;
         for(int a : myList){
             System.out.print(a + " ");
+            count++;
+            if(count > num) break;
         }
         System.out.print("\n");
     }
@@ -43,6 +46,12 @@ public class HeapSort {
         }
 
         myList[i] = temp;
+    }
+
+    public void insertNumber(int number){
+        myList[num] = number;
+        num++;
+        makeHeap();
     }
 
     public void makeHeap(){
